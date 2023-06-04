@@ -13,7 +13,7 @@ def main():
         case "service charge":
             calculate_service()
         case "quieten down":
-            pass #STILL TO COME
+            quieten_or_slow_down()
         case "douglas adams":
             pass #STILL TO COME
         case _:
@@ -42,5 +42,36 @@ def calculate_service():
     percent = float(input("What percentage would you like to tip? ").strip("%")) / 100
     tip = dollars * percent
     print(f"To leave {round(percent*100,1)}% tip, you should leave ${tip:.2f}")
+
+#3. quieten_down
+#This asks the user if they want to quieten down or slow down the speech, and then returns a result appropriately.
+
+
+def quieten_or_slow_down():
+    user_input = input("Please enter some text in your outdoor voice: ")
+    user_choice = input("Do you want to quieten down, slow down, both, or neither? ").strip().casefold()
+    #Prompt user for input
+    match user_choice:
+        case "quieten down" :
+            user_input = quieten_down(user_input)
+        case "slow down" :
+            user_input = slow_down(user_input)
+        case "both":
+            user_input = quieten_down(slow_down(user_input))
+        case "neither":
+            print("Ok fair enough.")
+        case _:
+            print("I didn't understand you, sorry goodbye.")
+    print(user_input)
+
+def slow_down(sometext):
+    #mimic slowing down by adding multiple full stops in the spaces
+    slowed_down = sometext.replace(" ","...")
+    return slowed_down
+
+def quieten_down(sometext):
+    #Write the user's input entirely in lowercase by applying the method 'lower'
+    quietened_down = sometext.lower()
+    return quietened_down
 
 main()
