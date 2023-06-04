@@ -1,7 +1,7 @@
 #I'm just practicing basic skills learnt. I've put various beginner101 practices here but put them together so that the user is prompted to specify which one he wants to run at the command line.
 
 #defining my exercise list as a global variable.
-exerciselist = ["emojis", "service charge", "quieten down", "slow down", "douglas adams"]
+exerciselist = ["emojis", "service charge", "quieten down", "douglas adams"]
 
 def main():
     #Prompt the user to specify the exercise they'd like demonstrated. My ability to validate input is still pretty limited but I have stripped leading or trailing whitespace and forced lowercase so that the input is treated case insensitively.
@@ -12,6 +12,10 @@ def main():
             run_emojis()
         case "service charge":
             calculate_service()
+        case "quieten down":
+            pass #STILL TO COME
+        case "douglas adams":
+            pass #STILL TO COME
         case _:
             print("Sorry, I did not understand your input. I'm spontaneously combusting.")
 
