@@ -33,3 +33,48 @@ print("Using now() with with the date class would return an error because it pas
 # datetime.timedelta (a duration that represents the difference between two date, datetime or time objects)
 # datetime.tzinfo (used by the datetime and time classes to provide timezone information)
 # datetime.timezone (shows the tzinfo as an offset from UTC)
+
+#CREATING DATE OBJECTS
+a_date = datetime.date(2023,6,2)
+#date() is a constructor of the date class.
+print(f"datetime.date(2023,6,2)     = {a_date}")
+print(f"datetime.datetime(2023,6,2) = {datetime.datetime(2023,6,2)}")
+print(f"a_date.year = {a_date.year}")
+print(f"a_date.month = {a_date.month}")
+print(f"a_date.day = {a_date.day}")
+#If we want to import only the date class from the datetime module we could write
+#from datetime import date
+#and then we could write a_date = date(2023,6,2)
+
+#FORMATTING DATETIME
+#strftime() method creates a formatted string from a given date, datetime or time object
+#i.e. the method is defined for the classes date, datetime, time
+print(f"right_now.strftime('%D %d %M %Y, %H:%M:%S') = {right_now.strftime('%d/%m/%Y, %H:%M:%S')}")
+# strptime() method creates a datetime object from a given string format, i.e. goes the other way around to strftime() 
+#strptime() takes two arguments: striptime(string representing date and time, formatting mask)
+
+# FORMATS
+# %a Abbreviated weekday Sun, Mon, Tue
+# %A full weekday name Sunday, Monday, Tuesday
+# %w weekday as a decimal number 0,1,2,3,4,5,6
+# %d day of month (zero padded decimal)
+# %-d day of month NOT zero padded
+# %b abbbreviated month name
+# %B full month name
+# %m month zero padded decimal
+# %-m month decimal NOT zero padded
+# %y year without century
+# %Y full year
+# %H, %-H hour, 24H
+# %I, %-I hour, 12H
+# %p AM or PM
+# %M, %-M, %S, %-S
+# %f microsecond
+# %z UTC offset
+# %Z timezone name
+# %j, %-j day of the year
+# %U week number of the year (Sunday start)
+# %W week number of the year (Monday start)
+# %c locale's date and time
+# %x locale's date
+# %X locale's time
