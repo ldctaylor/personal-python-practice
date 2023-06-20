@@ -53,6 +53,14 @@ print(f"right_now.strftime('%D %d %M %Y, %H:%M:%S') = {right_now.strftime('%d/%m
 # strptime() method creates a datetime object from a given string format, i.e. goes the other way around to strftime() 
 #strptime() takes two arguments: striptime(string representing date and time, formatting mask)
 
+#Example converting an ISO date string into an easily readable format
+
+date = "2021-07-03T07:00:00+08:00"
+print("Starting with a string 2021-07-03T07:00:00+08:00")
+dt_1 = datetime.datetime.strptime(date,"%Y-%m-%dT%H:%M:%S%z")
+print(f"datetime.strptime(date,'%Y-%m-%dT%H:%M:%S%z') = {dt_1}")
+print(f"And then dt_1 = dt_1.strftime('%A %d %b %Y') = {dt_1.strftime('%A %d %b %Y')}")
+
 # FORMATS
 # %a Abbreviated weekday Sun, Mon, Tue
 # %A full weekday name Sunday, Monday, Tuesday
