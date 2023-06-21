@@ -32,4 +32,13 @@ ls = [5,3,4,5,2,1]
 # print(ls.index(max(ls[-1:])))
 print(len(ls) -1 - ls[::-1].index(max(ls)))
 
+# changing strings to integers:
+galaxies = [["1","345667"],["2","486846"],["3","34546"],["4","457457"],["5","4758"]]
+for index in range(len(galaxies)):
+    for galaxy in range(2):
+        galaxies[index][galaxy] = int(galaxies[index][galaxy])
 
+#Finding the minimum value in set index position of nested lists
+#the [1] is the index position of the value you want to target
+velocities = [_[1] for _ in galaxies]
+print(min(velocities))
