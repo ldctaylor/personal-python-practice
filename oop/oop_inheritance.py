@@ -1,5 +1,27 @@
-# base class
+#define a superclass
+class super_class:
+    #attributes and method definition
+    pass
 
+#inheritance
+class sub_class(super_class):
+    #attributes and method of super_class
+    #attributes and method of sub_class
+    pass
+
+##MULTIPLE inheritance
+class SuperClass1:
+    #features of superclass 1
+    pass
+class SuperClass2:
+    #features of superclass 2
+    pass
+class MultiDerived(SuperClass1, SuperClass2):
+    #features of SuperClass1 + SuperClass2 _ MultiDerived class
+    pass
+
+#----------------Example
+# base class
 class Animal:
     def eat(self):
         print("I can eat!")

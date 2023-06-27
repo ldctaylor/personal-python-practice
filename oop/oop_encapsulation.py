@@ -23,5 +23,5 @@ c.sell()
 c.__maxprice = 1000 # <-- does not update __maxprice as is coming from outaside the class and __maxprice is private variable
 c.sell() 
 
-c.setMaxPrice(1000)
+c.setMaxPrice(1000) # <-- this updates __maxprice as it is a method of the class
 c.sell()
